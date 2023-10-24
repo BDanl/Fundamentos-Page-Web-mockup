@@ -262,6 +262,14 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="row2 pt-3 pb-0">
+                  <div class="row d-flex text-center">
+                    <div class="fieldC-r2">
+                      <input type="submit" value="Agregar" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -284,7 +292,7 @@
                         <input
                           type="search"
                           class="form-control rounded"
-                          placeholder="Search"
+                          placeholder="Buscar..."
                           aria-label="Search"
                           aria-describedby="search-addon"
                         />
@@ -320,10 +328,10 @@
                         <div>
                           <input
                             type="text"
-                            class="inputti form-control"
-                            id="nom"
+                            class="inputfield form-control"
+                            id="ti"
                             pattern="[A-Z a-z' '']{1,30}"
-                            required
+                            readonly
                           />
                         </div>
                       </div>
@@ -341,16 +349,16 @@
                         <div>
                           <input
                             type="text"
-                            class="inputnr form-control"
-                            id="nomm"
+                            class="inputfield form-control"
+                            id="nr"
                             pattern="[A-Z a-z' '']{1,30}"
-                            required
+                            readonly
                           />
                         </div>
                       </div>
                     </div>
 
-                    <div class="row py-1 ">
+                    <div class="row py-1">
                       <div
                         class="col-xl-1 col-lg-1 col-md-2"
                         style="display: flex; align-items: center"
@@ -362,17 +370,20 @@
                         <input
                           type="text"
                           class="form-control"
-                          id="tel"
+                          id="idi"
                           pattern="{1,10}"
                           maxlength="10"
                           size="10"
                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$');"
-                          required
+                          readonly
                         />
                       </div>
                     </div>
 
-                    <div class="row py-1">
+                    <div
+                      class="row py-1"
+                      style="height: 56px; align-items: center"
+                    >
                       <div
                         class="col-xl-1 col-lg-1 col-md-2"
                         style="display: flex; align-items: center"
@@ -387,15 +398,18 @@
                           <input
                             type="text"
                             class="form-control"
-                            id="nomm"
+                            id="po"
                             pattern="[A-Z a-z' '']{1,30}"
-                            required
+                            readonly
                           />
                         </div>
                       </div>
                     </div>
 
-                    <div class="row py-1">
+                    <div
+                      class="row py-2"
+                      style="height: 56px; align-items: center"
+                    >
                       <div
                         class="col-xl-1 col-lg-1 col-md-2"
                         style="display: flex; align-items: center"
@@ -407,30 +421,36 @@
                         <input
                           type="text"
                           class="form-control"
-                          id="tel"
+                          id="vdi"
                           pattern="{1,10}"
                           maxlength="10"
                           size="10"
                           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$');"
-                          required
+                          readonly
                         />
                       </div>
                     </div>
                   </div>
 
-                  <div class="rowedit d-flex text-center">
+                  <div class="rowedit d-flex text-center pt-2">
                     <div class="col">
                       <button
                         type="button"
                         class="btne btn btn-outline-dark btn-delete py-1"
                         onclick="edit()"
+                        id="btne"
+                        data-toggle="tooltip"
+                        data-html="true"
+                        title="doble click"
                       >
                         <span>Editar Inmueble</span>
+
                         <!-- https://alvarotrigo.com/blog/change-css-javascript/ -->
                       </button>
                     </div>
 
                     <div class="col">
+                      <!-- boton debe conectar con la base de datos para eliminar un inmueble -->
                       <button
                         type="button"
                         class="btn btn-outline-dark btn-delete py-1"
