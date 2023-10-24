@@ -72,3 +72,14 @@ background-color: rgb(72, 197, 255);
   justify-content: space-around; */
   background-color: rgb(72, 197, 255);
 }
+
+
+.sep1 * {
+  pointer-events: none;
+  
+}
+
+.sep1.row1{
+align-items: between;
+
+}

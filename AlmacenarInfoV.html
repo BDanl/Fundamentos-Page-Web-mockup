@@ -196,6 +196,31 @@
               <script src="script.js"></script>
 
               <div class="mm pt-3" id="parq" style="display: none">
+                <div class="d-flex justify-content-center p-3">
+                  <label for="#" class="px-3"> Bloque:</label>
+                  <select
+                    name="seleccionapto"
+                    class="w-50"
+                    id="bloque"
+                    required
+                  >
+                    <option value="01">Bloque 01</option>
+                    <option value="02">Bloque 02</option>
+                  </select>
+                  <label for="#" class="px-3"> Apartamento:</label>
+                  <select
+                    name="seleccionapto"
+                    class="w-50"
+                    id="apartamento"
+                    required
+                  >
+                    <option value="01">Apartamento 01</option>
+                    <option value="02">Apartamento 02</option>
+                    <option value="03">Apartamento 03</option>
+                    <option value="04">Apartamento 04</option>
+                  </select>
+                </div>
+
                 <div class="mm1 d-flex py-1 pb-2 justify-content-between">
                   <div
                     class="col-xl-1 col-lg-1 col-md-2"
@@ -242,7 +267,7 @@
           </div>
         </form>
       </section>
-
+      <!-- section edición -->
       <section class="kkk text-light p-3">
         <form action="">
           <div class="container4">
@@ -266,7 +291,7 @@
                         <button
                           type="button"
                           class="btn btn-outline-primary"
-                          onclick="myFunction2(2)"
+                          onclick="myFunction2()"
                         >
                           Buscar
                         </button>
@@ -274,22 +299,28 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="mm pt-3" id="inmu" style="display: ">
-                  <div>
+                <!--Hidden section edition  -->
+                <div
+                  class="mm pt-3"
+                  id="inmu"
+                  style="display: none; text-align: left; align-items: center"
+                >
+                  <div class="sep1 d-flex flex-column align-items-evenly">
                     <div class="row py-1">
                       <div
                         class="col-xl-1 col-lg-1 col-md-2"
                         style="display: flex; align-items: center"
                       >
-                        <label for="nom">Tipo de inmueble:</label>
+                        <label class="align-items-center" for="nom"
+                          >Tipo de inmueble:</label
+                        >
                       </div>
 
                       <div class="col-xl-11 col-lg-11 col-md-10">
                         <div>
                           <input
                             type="text"
-                            class="form-control"
+                            class="inputti form-control"
                             id="nom"
                             pattern="[A-Z a-z' '']{1,30}"
                             required
@@ -310,6 +341,51 @@
                         <div>
                           <input
                             type="text"
+                            class="inputnr form-control"
+                            id="nomm"
+                            pattern="[A-Z a-z' '']{1,30}"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row py-1 ">
+                      <div
+                        class="col-xl-1 col-lg-1 col-md-2"
+                        style="display: flex; align-items: center"
+                      >
+                        <label for="tel">Id del inmueble: </label>
+                      </div>
+
+                      <div class="col-xl-11 col-lg-11 col-md-10">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="tel"
+                          pattern="{1,10}"
+                          maxlength="10"
+                          size="10"
+                          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$');"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row py-1">
+                      <div
+                        class="col-xl-1 col-lg-1 col-md-2"
+                        style="display: flex; align-items: center"
+                      >
+                        <div>
+                          <label for="nom">Propietario:</label>
+                        </div>
+                      </div>
+
+                      <div class="col-xl-11 col-lg-11 col-md-10">
+                        <div>
+                          <input
+                            type="text"
                             class="form-control"
                             id="nomm"
                             pattern="[A-Z a-z' '']{1,30}"
@@ -324,7 +400,7 @@
                         class="col-xl-1 col-lg-1 col-md-2"
                         style="display: flex; align-items: center"
                       >
-                        <label for="tel">Id del inmueble:</label>
+                        <label for="tel">Valor del inmueble:</label>
                       </div>
 
                       <div class="col-xl-11 col-lg-11 col-md-10">
@@ -342,14 +418,27 @@
                     </div>
                   </div>
 
-                  <div>
-                    <button
-                      type="button"
-                      class="btn btn-outline-dark btn-delete"
-                      onclick=""
-                    >
-                      <span>Borrar</span>
-                    </button>
+                  <div class="rowedit d-flex text-center">
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btne btn btn-outline-dark btn-delete py-1"
+                        onclick="edit()"
+                      >
+                        <span>Editar Inmueble</span>
+                        <!-- https://alvarotrigo.com/blog/change-css-javascript/ -->
+                      </button>
+                    </div>
+
+                    <div class="col">
+                      <button
+                        type="button"
+                        class="btn btn-outline-dark btn-delete py-1"
+                        onclick=""
+                      >
+                        <span>Borrar Inmueble</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

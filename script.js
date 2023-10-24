@@ -8,10 +8,25 @@ function myFunction(val) {
 }
 
 function myFunction2() {
-    if (val=== 1) {
-        document.getElementById('').style.display='none';
-    } 
-    if (val==2){
-        document.getElementById('').style.display='block';
+
+    if (onclick=true) {
+        document.getElementById('inmu').style.display='block';
+        
+    }else{
+        document.getElementById('inmu').style.display='none';
+        
+}
+    
+}
+
+function edit() {
+    if (onclick=true) {
+        /* const button = document.querySelector('btne');
+        button.addEventListener('click', () => {
+            const element = document.querySelector('.inputti');
+            
+        }); */
+       
     }
 }
+
