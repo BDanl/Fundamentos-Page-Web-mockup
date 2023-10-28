@@ -9,13 +9,13 @@ function myFunction(val) {
 
 function myFunction2() {
   if ((onclick = true)) {
-    document.getElementById("inmu").style.display = "block";
+    document.getElementById("inmu").style.display = "block"; //Mostrar elemento
   } else {
-    document.getElementById("inmu").style.display = "none";
+    document.getElementById("inmu").style.display = "none"; //Ocultar elemento
   }
 }
 
-function edit() {
+/* function edit() {
   
   const inputField = document.getElementById("ti");
   const inputField2 = document.getElementById("nr");
@@ -44,7 +44,7 @@ function edit() {
       editButton.textContent = "Habilitar Edición";
     }
   });
-}
+} */
 
 /* function edit() {
   if ((onclick = true)) {
@@ -57,3 +57,19 @@ function edit() {
     ;
   }
 } */
+
+function edit() {
+  const inputFields = document.querySelectorAll(".editable-input");
+  const editButton = document.getElementById("btne");
+
+  editButton.addEventListener("click", function () {
+    const readOnly = inputFields[0].readOnly; // Tomar el estado del primer campo de entrada
+    for (const inputField of inputFields) {
+      inputField.readOnly = !readOnly; // Cambiar el estado para todos los campos
+    }
+
+    editButton.textContent = readOnly
+      ? "Deshabilitar Edición"
+      : "Habilitar Edición";
+  });
+}
