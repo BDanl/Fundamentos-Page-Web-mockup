@@ -299,3 +299,11 @@ align-items: between;
 .formulario__grupo-incorrecto .formulario__input {
   border: 3px solid #bb2929;
 }
+
+.btn{
+width: auto;
+
+align-items: center;
+text-align: center;
+
+}

@@ -15,6 +15,15 @@ function myFunction2() {
   }
 }
 
+function myFunction11(val) {
+  if (val === 1) {
+    document.getElementById("listv").style.display = "none";
+  }
+  if (val == 2) {
+    document.getElementById("listv").style.display = "block";
+  }
+}
+
 /* function edit() {
   
   const inputField = document.getElementById("ti");
@@ -73,6 +82,9 @@ function edit() {
       : "Habilitar Edición";
   });
 }
+
+
+
 
 
 
