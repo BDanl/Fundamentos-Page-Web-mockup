@@ -84,7 +84,41 @@ function edit() {
 }
 
 
+/* vincular inmuebles */
 
+
+const tipinmunum = {
+  apto: ["Apto01", "Apto02", "Apto03", "Apto04","Apto05"],
+  parq: ["Parqueadero01", "Parqueadero02", "Parqueadero03", "Parqueadero04","Parqueadero05"],
+  cu: ["Cuarto Util 01", "Cuarto Util 02", "Cuarto Util 03", "Cuarto Util 04","Cuarto Util 05"]
+}
+
+const tipoinmueble = document.getElementById('tipinmu')
+const inmuebles = document.getElementById('inmu')
+
+tipoinmueble.addEventListener("change", function asignarinmuebles() {
+  let depart = document.getElementById("tipinmu").value;
+  inmuebles.innerHTML = "";
+  if (depart == "apto") {
+      llenarselectinmuebles(tipinmunum.apto.sort())
+  }
+  if (depart == "parq") {
+      llenarselectinmuebles(tipinmunum.parq.sort())
+  }
+  if (depart == "cu") {
+      llenarselectinmuebles(tipinmunum.cu.sort())
+  }
+
+});
+
+function llenarselectinmuebles(arrayinmuebles) {
+  arrayinmuebles.forEach((n) => {
+      var option = document.createElement("option");
+      console.log(n);
+      option.text = n;
+      inmuebles.add(option);
+  });
+}
 
 
 

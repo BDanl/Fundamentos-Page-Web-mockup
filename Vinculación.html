@@ -96,6 +96,207 @@
         </div>
       </section>
 
+      <section class="bg-secondary text-light p-3">
+
+
+        <div class="container3 ">
+  
+            <div class="row">
+  
+                <div class="r text-center">
+  
+                    <fieldset>
+                        <legend>Vinculacion de residentes a inmuebles:</legend>
+                      
+                    </fieldset>
+  
+                    <form action="">
+  
+                      <div class="mm pt-3" id="listv" style="display: noe;">
+  
+                        <div class="row ee py-1">
+                          <div
+                            class="col-xl-6 col-lg-6 col-md-6"
+                            style="display: flex; align-items: center"
+                          >
+                          <div class="row e1 py-1 align-items-center" style="width: 100%;">
+                            <div
+                              class="col-xl-3 col-lg-3 col-md-4"
+                              style="display: flex; align-items: center; justify-content: space-around;"
+                            >
+                            <label for="tipinmu" class="form-label ">Tipo de inmueble</label>
+                            </div>
+                
+                            <div
+                              class="col-xl-9 col-lg-9 col-md-8"
+                              style="display: flex; align-items: center; justify-content: space-around;"
+                            >
+                            <select class="form-select" id="tipinmu" name="tipinmu">
+                              <option selected>Seleccionar...</option>
+                              <option value="apto">Apartamento</option>
+                              <option value="parq">Parqueadero</option>
+                              <option value="cu">Cuarto Util</option>
+                          </select>
+  
+                            </div>
+                          </div>
+              
+                          </div>
+              
+                          <div
+                            class="col-xl-6 col-lg-6 col-md-6"
+                            style="display: flex; align-items: center"
+                          >
+              
+                          <div class="row e2 py-1 align-items-center" style="width: 100%;">
+                          <div
+                            class="col-xl-3 col-lg-3 col-md-4"
+                            style="display: flex; align-items: center; justify-content: space-around;"
+                          >
+                          <label for="inmu" class="form-label">Numeral de Inmueble:</label>
+                          </div>
+                          
+                          <div class="col-xl-9 col-lg-9 col-md-8" style="justify-content: space-around;">
+              
+                            <select class="form-select" id="inmu" name="inmu">
+                              <option selected>Seleccionar...</option>
+                              <option value="one">Apto01</option>
+                              <option value="two">Apto02</option>
+                              <option value="three">Apto03</option>
+                              <option value="cuatro">Apto04</option>
+                              <option value="cinco">Apto05</option>
+                          </select>
+                          </div>
+                                </div>
+               
+                          </div>
+                        </div>
+
+                        <div class="row cj py-1 align-items-center" style="width: 100%;">
+                          <h4>Vincular vehiculo</h4>
+                          <div
+                            class="col-xl-3 col-lg-3 col-md-4"
+                            style="display: flex; align-items: center; justify-content: space-around;"
+                          >
+                          <label for="carros" class="form-label ">Carros en conjunto</label>
+                          </div>
+              
+                          <div
+                            class="col-xl-6 col-lg-9 col-md-8"
+                            style="display: flex; align-items: center; justify-content: space-around;"
+                          >
+                          <select class="form-select" id="carros" name="carros">
+                            <option selected>Seleccionar...</option>
+                            <option value="apto">XYZ567</option>
+                            <option value="parq">WRT297</option>
+                            <option value="cu">HYT025</option>
+                        </select>
+
+                          </div>
+                        </div>
+
+                        <div class="row2 pt-3 pb-0">
+                          <h4>Encontrar residente</h4>
+                          <div class="row d-flex text-center">
+                            <div class="fieldC-r2 py-2">
+                              <div class="input-group">
+
+                                  <input
+                                    type="search"
+                                    class="form-control rounded"
+                                    placeholder="Buscar residente..."
+                                    aria-label="Search"
+                                    aria-describedby="search-addon"
+                                  />
+                                  
+                                  <button
+                                    type="button"
+                                    class="btn btn-outline-light mx-2"
+                                    onclick=""
+                                  >
+                                    Buscar
+                                  </button>
+                                  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+  
+                        <div class="row py-2">
+  
+  
+                          <div class="col-xl-2 col-lg-2 col-md-2" style="display: flex; align-items: center;">
+                              <label for="nom">Nombres:</label>
+            
+                          </div>
+            
+                          <div class="col-xl-10 col-lg-10 col-md-10">
+                              <div>
+                                  <input type="text" class="form-control" id="nom" pattern="[A-Z a-z' '']{1,30}" >
+            
+                              </div>
+            
+                          </div>
+                          
+                         </div>
+            
+                        <div class="row py-2">
+            
+                            <div class="col-xl-2 col-lg-2 col-md-2" style="display: flex; align-items: center;">
+                                <label for="ape">Apellidos:</label>
+            
+                            </div>
+            
+                            <div class="col-xl-10 col-lg-10 col-md-10">
+                                <div>
+                                    <input type="text" class="form-control" id="ape" pattern="[A-Z a-z' '']{1,30}" >
+            
+                                </div>
+            
+                            </div>
+            
+                        </div>
+            
+                        <div class="row py-2 align-items-center">
+            
+                          <div class="col-xl-2 col-lg-2 col-md-3" style="display: flex; align-items: center;">
+                              <label for="doc">Documento de identidad:</label>
+            
+                          </div>
+            
+                          <div class="col-xl-10 col-lg-10 col-md-9">
+            
+                              <input type="text" class="form-control" id="ape" pattern="[{1,10}" maxlength="10" size="10"
+                                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$');"
+                                  >
+                          </div>
+            
+                        </div>
+  
+                        <div class="col">
+                          <button
+                            type="submit"
+                            class="btn btn-outline-dark btn-delete py-1 my-2"
+                            id="btnve"
+                            
+                          >
+                            <span>Vincular</span>
+                          </button>
+                        </div>
+                    </div>
+  
+                    </form>
+  
+                </div>
+            </div>
+  
+        </div>
+  
+  
+    </section>
+
+     
+
       <footer class="bg-dark text-center text-white" id="footer">
         <!-- Grid container -->
         <div class="container p-5 pb-1">
